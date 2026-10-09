@@ -1,0 +1,23 @@
+name: Prototype context-core
+on:
+  push:
+    paths:
+      - "prototypes/context-core/**"
+      - ".github/workflows/prototype-test.yml"
+  pull_request:
+    paths:
+      - "prototypes/context-core/**"
+      - ".github/workflows/prototype-test.yml"
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm test
+        working-directory: prototypes/context-core
