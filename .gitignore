@@ -1,0 +1,27 @@
+# Rust / JS
+target/
+node_modules/
+dist/
+build/
+.turbo/
+coverage/
+*.tsbuildinfo
+# IDE / system
+.DS_Store
+.idea/
+.vscode/
+# Local vault and secrets
+.env
+.env.*
+!.env.example
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.key
+*.pem
+*.p12
+*.pfx
+sovereign-data/
+backups/
